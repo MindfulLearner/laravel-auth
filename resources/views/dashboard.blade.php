@@ -11,6 +11,14 @@
                 <div class="p-6 text-gray-900 dark:text-gray-100">
                     {{ __("You're logged in!") }}
                 </div>
+                {{-- zona che mostrera card che si possono creare e modificare  --}}
+                <div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h5 class="p-3  text-white">Card title</h5>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
