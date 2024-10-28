@@ -30,7 +30,9 @@ Route::middleware('auth')->group(function () {
 });
 
 
-// sistemato per mostrare dashboard su index
-Route::get('/dashboard', [ProductController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
 
 require __DIR__.'/auth.php';

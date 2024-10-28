@@ -12,6 +12,7 @@
 
         @vite(['resources/css/app.css', 'resources/js/app.js'])
 
+        <script src="https://kit.fontawesome.com/58e1ebb4d2.js" crossorigin="anonymous"></script>
 
         {{-- <!-- Styles -->
         <style>
