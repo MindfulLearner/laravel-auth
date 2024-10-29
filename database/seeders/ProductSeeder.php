@@ -17,8 +17,7 @@ class ProductSeeder extends Seeder
         Product::truncate();
         // by using faker we can create a random product
         for ($i = 0; $i < 10; $i++) {
-            
-            $name = fake()->sentence(4);
+            $name = fake()->sentence(2);
             $slug = self::createSlug($name);
             Product::create([
                 // creating slug from name
@@ -27,7 +26,7 @@ class ProductSeeder extends Seeder
 
                 'description' => fake()->text(),
                 'price' => fake()->randomFloat(2, 1, 100),
-                'cover_image' => fake()->optional()->imageUrl(),
+                'cover_image' => fake()->optional()->imageUrl(640, 480, 'animals'),
                 'likes' => fake()->numberBetween(0, 100),
                 'published' => fake()->boolean()
             ]);
