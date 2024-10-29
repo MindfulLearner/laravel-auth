@@ -40,10 +40,12 @@
 
         <div class="flex flex-col text-black">
             <label for="cover_image" class="text-sm font-semibold">Immagine di Copertina</label>
+            {{-- <input type="file" name="cover_image" id="cover_image" class="mt-1 p-2 border border-gray-300 rounded-md focus:ring focus:ring-blue-200"> --}}
             <input type="text" name="cover_image" id="cover_image" value="{{ $product->cover_image }}" class="mt-1 p-2 border border-gray-300 rounded-md focus:ring focus:ring-blue-200">
         </div>
 
         <div class="flex items-center text-black">
+            <input type="hidden" name="published" value="0"> 
             <input type="checkbox" name="published" id="published" value="1" {{ $product->published ? 'checked' : '' }} class="mr-2 h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring focus:ring-blue-200">
             <label for="published" class="text-sm font-semibold">Pubblicato</label>
         </div>
