@@ -16,10 +16,10 @@
             <a href="{{ route('products.edit', $product['id']) }}" class="bg-blue-800 px-4 py-2 rounded-md text-center hover:bg-blue-700">
               Edit
             </a>
-            <form action="{{ route('products.destroy', $product['id']) }}" method="POST" class="deleteButton">
+            <form action="{{ route('products.destroy', $product['id']) }}" method="POST">
               @csrf
               @method('DELETE')
-              <button type="submit" class="bg-red-800 px-4 py-2 rounded-md text-center hover:bg-red-700">
+              <button type="submit" class="bg-red-800 px-4 py-2 rounded-md text-center hover:bg-red-700 deleteButton">
                 Delete
               </button>
             </form>
@@ -60,19 +60,18 @@
           </div>
         </div>
       </div>
+    @endforeach
       <script>
         // logica conferma cancellazione
         document.querySelectorAll(".deleteButton").forEach(function(button) {
             button.addEventListener("click", function(event) {
                 if (!confirm("Sei sicuro di voler cancellare questo comic?")) {
                     event.preventDefault();
-                } else {
-                  //qui entra ma non susccede niente !?
-                  console.log("cancella");
+                    //manda a url di cancellazione
+                    // esce solo se si clicca cancel
                 }
             });
         });
     </script>
-    @endforeach
   </div>
 @endsection

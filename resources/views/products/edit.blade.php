@@ -24,22 +24,22 @@
         @method('PUT')
 
         <div class="flex flex-col text-black">
-            <label for="name" class="text-sm font-semibold">Nome</label>
+            <label for="name" class="text-sm font-semibold text-white">Nome</label>
             <input type="text" name="name" id="name" value="{{ $product->name }}" class="mt-1 p-2 border border-gray-300 rounded-md focus:ring focus:ring-blue-200">
         </div>
 
         <div class="flex flex-col text-black">
-            <label for="description" class="text-sm font-semibold">Descrizione</label>
+            <label for="description" class="text-sm font-semibold text-white">Descrizione</label>
             <input type="text" name="description" id="description" value="{{ $product->description }}" class="mt-1 p-2 border border-gray-300 rounded-md focus:ring focus:ring-blue-200">
         </div>
 
         <div class="flex flex-col text-black">
-            <label for="price" class="text-sm font-semibold">Prezzo</label>
-            <input type="number" name="price" id="price" value="{{ $product->price }}" class="mt-1 p-2 border border-gray-300 rounded-md focus:ring focus:ring-blue-200">
+            <label for="price" class="text-sm font-semibold text-white">Prezzo</label>
+            <input type="float" name="price" id="price" value="{{ $product->price }}" class="mt-1 p-2 border border-gray-300 rounded-md focus:ring focus:ring-blue-200">
         </div>
 
         <div class="flex flex-col text-black">
-            <label for="cover_image" class="text-sm font-semibold">Immagine di Copertina</label>
+            <label for="cover_image" class="text-sm font-semibold text-white">Immagine di Copertina</label>
             {{-- <input type="file" name="cover_image" id="cover_image" class="mt-1 p-2 border border-gray-300 rounded-md focus:ring focus:ring-blue-200"> --}}
             <input type="text" name="cover_image" id="cover_image" value="{{ $product->cover_image }}" class="mt-1 p-2 border border-gray-300 rounded-md focus:ring focus:ring-blue-200">
         </div>
@@ -47,7 +47,7 @@
         <div class="flex items-center text-black">
             <input type="hidden" name="published" value="0"> 
             <input type="checkbox" name="published" id="published" value="1" {{ $product->published ? 'checked' : '' }} class="mr-2 h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring focus:ring-blue-200">
-            <label for="published" class="text-sm font-semibold">Pubblicato</label>
+            <label for="published" class="text-sm font-semibold text-white">Pubblicato</label>
         </div>
 
         <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-200">Salva</button>
